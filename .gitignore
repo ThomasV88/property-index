@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Build artifacts
+build/*.toc
+build/*.pkl
+build/HouseIndex/
+dist/
+*.spec.bak
+
+# Runtime data (keep structure via .gitkeep)
+data/*.db
+data/*.db-journal
+data/photos/*
+!data/photos/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Claude
+.claude/

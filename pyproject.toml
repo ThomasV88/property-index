@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "house-index"
+version = "0.6.0"
+description = "Desktop aplikácia pre hodnotenie nehnuteľností — Index Ideálneho Bývania"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Tomas Voslar", email = "voslar@all4net.sk" }]
+license = { text = "Proprietary" }
+dependencies = [
+    "PySide6>=6.6",
+    "Pillow>=10.0",
+    "pydantic>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-qt>=4.3",
+    "ruff>=0.3",
+    "black>=24.0",
+    "pyinstaller>=6.3",
+]
+
+[project.scripts]
+house-index = "house_index.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+house_index = ["resources/**/*", "ui/i18n/*.qm", "db/schema.sql"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
+ignore = ["N802", "N803", "N806"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

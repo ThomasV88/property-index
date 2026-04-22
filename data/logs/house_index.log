@@ -1,0 +1,9 @@
+2026-04-22 19:18:18 INFO    [house_index] Logging started → C:\Users\tomas\projects\house-index\data\logs\house_index.log
+2026-04-22 19:18:18 ERROR   [house_index] Uncaught exception
+Traceback (most recent call last):
+  File "<string>", line 18, in <module>
+  File "C:\Users\tomas\projects\house-index\src\house_index\ui\property_model.py", line 28, in rowCount
+    return 0 if parent.isValid() else len(self._items)
+                ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'isValid'
+2026-04-22 19:18:29 INFO    [house_index] Logging started → C:\Users\tomas\projects\house-index\data\logs\house_index.log
