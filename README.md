@@ -122,4 +122,4 @@ Aktuálne **77 testov** (scoring 49, repository 10, property service 8, photo se
 
 ## Licencia
 
-Proprietary. Autor: Tomas Voslar ([voslar@all4net.sk](mailto:voslar@all4net.sk)).
+Proprietary. Autor: Tomas Voslar.
